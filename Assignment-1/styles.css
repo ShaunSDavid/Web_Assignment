@@ -1,0 +1,89 @@
+/* Resetting default styles and applying a base font family */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the header section */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Styling for the navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styling for the main content area */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Styling for images within the box */
+.box img {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* Transformation styles for the transformed class */
+.transformed {
+  padding-top: 10%;
+  transform: rotate(45deg) scale(1.2) skewX(30deg);
+}
+
+/* Transition styles for the transitioned class on image hover */
+.transitioned img:hover {
+  /* Applying transition properties individually */
+  transition-property: opacity, transform;
+  opacity: 0.6;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  transform: scale(1.5);
+}
+
+/* Animation styles for the animated class */
+.animated {
+  padding-top: 15%;
+  /* Applying multiple animations with iteration and direction */
+  animation-name: slide, rotateAndBounce;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-direction: alternate;
+}
+
+/* Keyframes animation for sliding */
+@keyframes slide {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+/* Keyframes animation for rotation and bouncing */
+@keyframes rotateAndBounce {
+  0%, 100% {
+    transform: rotate(0) translateY(0);
+  }
+  50% {
+    transform: rotate(360deg) translateY(-20px);
+  }
+}
